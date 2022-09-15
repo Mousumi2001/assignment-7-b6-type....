@@ -48,6 +48,7 @@ const typeController = (e) => {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
   }
 
+
   // check if given question text is equal to user typed text
   if (questionText === userText) {
     gameOver();
@@ -92,6 +93,7 @@ const gameOver = () => {
   errorCount = 0;
   userText = "";
   display.classList.add("inactive");
+
 };
 
 const closeModal = () => {
@@ -118,6 +120,7 @@ const start = () => {
 
       clearInterval(startCountdown);
       startTime = new Date().getTime();
+
     }
     count--;
   }, 1000);
